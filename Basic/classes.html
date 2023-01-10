@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: #333;;
+            color: #fff;
+            font-size: 2em;
+            border: 3px;
+            padding: 24px;
+        }
+        input[type="radio"]
+        {
+            accent-color: red;
+        }
+        .head
+        {
+            background-color: yellow;
+        }
+        .gg
+        {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+        <div class="head" data-value="2023">
+            <h1>Azarudeen</h1>
+            <ul>
+                <li>azar 1</li>
+                <li>azar 2</li>
+                <li>azar 3</li>
+            </ul>
+        </div>
+    <form action="">
+        <label for="">Gender</label>
+        <input type="radio" name ="gender" value="male">Male
+        <input type="radio" name ="gender" value="female">Female
+        <input type="radio" name ="gender" value="others">Others
+        <button>submit</button>
+    </form>
+    <div class="new">
+    <p class="me">hello azar</p>
+    <h3 class="empty"></h3>
+    </div>
+    <button class="newbtn">ok</button>
+    <script src="/jquery/jq.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".head").mouseenter(function(){
+                alert("data value="+$(this).data("value"));
+            })
+
+            $("button").click(function(){
+                $(".new").prop('class','gg');
+            })
+
+            $('h3').text("wow it's new h3 from Jquery");
+        })
+    </script>
+</body>
+</html>

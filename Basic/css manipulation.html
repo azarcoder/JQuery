@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green
+        {
+            background-color: green;
+            font-size: 2em;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>hello</p>
+        <p>hi</p>
+        <p>welcome</p>
+    </div>
+    <button class="add">ADD</button>
+    <button class="rmv">Remove</button>
+    <button class="tog">Toggle</button>
+    <button class="has">Has</button>
+    <script src="/jquery/jq.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.add').click(function(){
+                $('div').addClass('green');
+            })
+            $('.rmv').click(function(){
+                $('div').removeClass('green');
+            })
+            $('.tog').click(function(){
+                $('div').toggleClass('green');
+            })
+
+            $('.has').click(function(){
+                alert($('div').hasClass('green'));
+            })
+        })
+    </script>
+</body>
+</html>

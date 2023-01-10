@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <form action="">
+        username:<input type="text" name="username"><br><br>
+        passowrd:<input type="password" name="pass"><br><br>
+        <button>submit</button>
+    </form>
+    <div class="links">
+        <a href="#">one</a>
+        <a href="#">two</a>
+        <a href="#">three</a>
+        <a href="#">four</a>
+    </div>
+    <script src="/jquery/jq.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("h1").click(function(){
+                $(this).html('new');
+                alert($(this).html());
+            });
+            $("form button").hover(function(){
+                $(this).css({
+                    "background-color":"red",
+                    "color":"#fff",
+                    "border":"none"
+                });
+            },function(){
+                    alert("out of submit button");
+                });
+            
+            $("input").focus(function(){
+                $(this).css("background-color","red");
+            })
+            $("input").blur(function(){
+                $(this).css("background-color","green");
+            })
+
+            $('div').mouseenter(function(){
+                $(this).css("background-color","yellow");
+                alert($('a').attr("href"))
+            })
+            $('a').attr("href","http://www.google.com");//all href set to google
+
+            /*
+            $('div a').attr(function(){
+                title:"same"
+                href:"http://www.google.com"
+            })
+            */
+            
+        });
+    </script>
+</body>
+</html>
